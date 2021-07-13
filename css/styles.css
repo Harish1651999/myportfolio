@@ -11,37 +11,33 @@ body {
   height: 92vh;
 }
 
-#hero .nav-menu {
+/* Navbar */
+#hero .nav-bucket .nav-btn {
+  text-align: right;
 }
 
-#hero .nav-menu .nav-menu-btn {
-}
-
-#hero .nav-menu .nav-menu-btn {
-}
-
-#hero .nav-menu .nav-menu-btn .nav-toggle {
+#hero .nav-bucket .nav-btn .nav-toggle {
   border: none;
   background: none;
-  position: absolute;
-  top: 20px;
-  right: 15px;
 }
 
-#hero .nav-menu .nav-menu-btn .nav-toggle i {
+#hero .nav-bucket .nav-btn .nav-toggle i {
   color: #fff;
-  font-size: 30px;
+  font-size: 28px;
 }
 
-#hero .nav-menu .hero-nav .links {
-  overflow: hidden;
-  height: 0;
+#hero .nav-bucket .nav-links .links {
 }
 
-#hero .nav-menu .hero-nav .links a {
-  display: block;
+#hero .nav-bucket .nav-links .links li {
 }
 
+#hero .nav-bucket .nav-links .links li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Content */
 #hero .hero-cnt .hero-cnt-hdng {
 }
 
@@ -78,6 +74,7 @@ body {
 #hero .social-links a {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   font-size: 16px;
   background: rgba(255, 255, 255, 0.1);
   height: 40px;
@@ -122,48 +119,8 @@ body {
 }
 
 @media (min-width: 992px) {
-  #hero .nav-menu .nav-menu-btn .nav-toggle {
+  #hero .nav-bucket .nav-btn .nav-toggle i {
     display: none;
-  }
-
-  #hero .nav-menu .hero-nav .links {
-    height: auto;
-    margin-top: 20px;
-  }
-
-  #hero .hero-nav {
-    margin-top: 35px;
-    position: relative;
-  }
-
-  #hero .hero-nav ul li {
-    margin-left: 35px;
-  }
-
-  #hero .hero-nav .links a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  #hero .hero-nav ul {
-    position: absolute;
-    top: 100px;
-    right: 212px;
-  }
-
-  #hero .hero-nav ul .active {
-    color: #fff;
-  }
-
-  #hero .hero-nav ul .active::after {
-    content: "";
-    position: absolute;
-    border-bottom: 2px solid #18d26e;
-    width: 25px;
-    top: 0;
-    bottom: 0;
-    left: 36px;
-    padding-top: 3px;
   }
 
   #hero .social-links {
@@ -173,17 +130,22 @@ body {
 }
 
 @media (min-width: 1200px) {
-  #hero .hero-nav ul {
-    position: absolute;
-    top: 100px;
-    right: 302px;
+  #hero .hero-cnt .hero-cnt-hdng h1 {
+    text-align: left;
+  }
+
+  #hero .hero-cnt .hero-cnt-title h2 {
+    text-align: left;
+  }
+
+  #hero .social-links {
+    text-align: left;
+  }
+
+  #credits .crdts-cnt {
+    text-align: right;
   }
 }
 
 @media (min-width: 1400px) {
-  #hero .hero-nav ul {
-    position: absolute;
-    top: 100px;
-    right: 394px;
-  }
 }
