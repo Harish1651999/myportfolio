@@ -4,148 +4,120 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-#hero {
-  background-color: #050505;
-  display: flex;
-  align-items: center;
-  height: 92vh;
+#header {
+  background: #e9e8e6;
+  padding: 15px 0;
 }
 
-/* Navbar */
-#hero .nav-bucket .nav-btn {
-  text-align: right;
+#header .header-main .header-title {
 }
 
-#hero .nav-bucket .nav-btn .nav-toggle {
+#header .header-main .header-title a {
+  font-size: 28px;
+  color: #222222;
+  font-weight: 400;
+}
+
+#header .header-main .header-links-nav {
+  padding-left: 40px;
+}
+
+#header .header-main .header-links {
+  padding-right: 15px;
+}
+
+#header .header-main .header-links ul li a {
+  color: #6f6f6f;
+  font-size: 18px;
+  padding-left: 6px;
+}
+
+#header .header-main .header-nav {
+}
+
+#header .header-main .header-nav .header-nav-btn {
+}
+
+#header .header-main .header-nav .header-nav-btn .nav-toggle {
   border: none;
+  color: #6f6f6f;
+  font-size: 28px;
   background: none;
 }
 
-#hero .nav-bucket .nav-btn .nav-toggle i {
-  color: #fff;
-  font-size: 28px;
+#header .header-main .header-nav .header-nav-links .links {
+  overflow: hidden;
+  height: 0;
 }
 
-#hero .nav-bucket .nav-links .links {
-}
-
-#hero .nav-bucket .nav-links .links li {
-}
-
-#hero .nav-bucket .nav-links .links li a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Hero Content */
-#hero .hero-cnt .hero-cnt-hdng {
-}
-
-#hero .hero-cnt .hero-cnt-hdng h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-}
-
-#hero .hero-cnt .hero-cnt-title {
-  margin: 20px 0 8px;
-}
-
-#hero .hero-cnt .hero-cnt-title h2 {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "Raleway", sans-serif;
-}
-
-#hero .hero-cnt .hero-cnt-title span {
-  color: #fff;
-  border-bottom: 2px solid #18d26e;
-  padding-bottom: 2px;
-}
-
-#hero .social-links {
-  margin-top: 40px;
-  text-align: center;
-}
-
-#hero .social-links a {
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-#hero .social-links i {
-  color: #fff;
-}
-
-#credits {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-#credits .crdts-cnt {
-  padding: 10px;
-  text-align: center;
-}
-
-#credits .crdts-cnt p {
-  margin: 0;
-  font-size: 13px;
-  color: #fff;
-  font-weight: 500;
-}
-
-#credits .crdts-cnt a {
-  color: #18d26e;
-  text-decoration: none;
+#header .header-main .header-nav .header-nav-links .links a {
+  display: block;
 }
 
 @media (min-width: 576px) {
-  #hero .hero-cnt .hero-cnt-title h2 {
-    text-align: center;
-  }
 }
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
-  #hero .nav-bucket .nav-btn .nav-toggle i {
+  #header .header-nav {
+  }
+
+  #header .header-nav .header-nav-btn .nav-toggle {
     display: none;
   }
 
-  #hero .social-links {
-    margin-top: 70px;
-    text-align: center;
+  #header .header-main .header-nav .header-nav-links {
+    position: relative;
+  }
+
+  #header .header-main .header-nav .header-nav-links .links {
+    height: auto;
+    position: absolute;
+    top: -23px;
+    right: 125px;
+  }
+
+  #header .header-main .header-nav .header-nav-links .links li {
+    padding: 10px 0 10px 30px;
+  }
+
+  #header .header-main .header-nav .header-nav-links .links li a {
+    color: #888888;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+  }
+
+  #header .header-main .header-nav .header-nav-links .links li .active {
+    color: #222222;
+  }
+
+  #header .header-main .header-nav .header-nav-links .links li .active::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #34b7a7;
+    width: 25px;
+    bottom: 9px;
+    left: 31px;
   }
 }
 
 @media (min-width: 1200px) {
-  #hero .hero-cnt .hero-cnt-hdng h1 {
-    text-align: left;
-  }
-
-  #hero .hero-cnt .hero-cnt-title h2 {
-    text-align: left;
-  }
-
-  #hero .social-links {
-    text-align: left;
-  }
-
-  #credits .crdts-cnt {
-    text-align: right;
+  #header .header-main .header-nav .header-nav-links .links {
+    height: auto;
+    position: absolute;
+    top: -23px;
+    right: 190px;
   }
 }
 
 @media (min-width: 1400px) {
+  #header .header-main .header-nav .header-nav-links .links {
+    height: auto;
+    position: absolute;
+    top: -23px;
+    right: 360px;
+  }
 }
