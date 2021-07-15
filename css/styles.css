@@ -7,6 +7,8 @@ body {
 #header {
   background: #e9e8e6;
   padding: 15px 0;
+  box-shadow: 0px 0px 25px 0 rgb(0 0 0 / 8%);
+  z-index: 997;
 }
 
 #header .header-main .header-title {
@@ -52,6 +54,68 @@ body {
 
 #header .header-main .header-nav .header-nav-links .links a {
   display: block;
+}
+
+/* Hero Section */
+#hero {
+  background-image: url("../images/hero-bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+}
+
+#hero .white-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-bucket {
+}
+
+#hero .hero-bucket .hero-title {
+}
+
+#hero .hero-bucket .hero-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#hero .hero-bucket .hero-content {
+}
+
+#hero .hero-bucket .hero-content h2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #6f6f6f;
+  margin: 10px 0 0 0;
+}
+
+#hero .hero-bucket .hero-btn {
+  text-align: center;
+}
+
+#hero .hero-bucket .hero-btn button {
+  background-color: #34b7a7;
+  border: none;
+  outline: none;
+  padding: 9px 40px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+#hero .hero-bucket .hero-btn button a {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 @media (min-width: 576px) {
@@ -110,6 +174,23 @@ body {
     position: absolute;
     top: -23px;
     right: 190px;
+  }
+
+  #hero .white-overlay {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #hero .hero-bucket .hero-title h1 {
+    font-size: 48px;
+  }
+
+  #hero .hero-bucket .hero-content h2 {
+    font-size: 22px;
   }
 }
 
