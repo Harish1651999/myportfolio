@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@300;500;700&display=swap");
+@import "./breakpoints/breakpoints.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+// Header Section
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
+  background: #000000;
+  transition: all 0.3s ease;
+  @include for-phone-only {
+    background-color: #000000;
+  }
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      a {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      span {
+        color: crimson;
+      }
+    }
+    .menu {
+      display: none;
+      // position: fixed;
+      // height: 100vh;
+      // width: 100%;
+      // left: -100%;
+      // top: 0;
+      // background: #111;
+      // text-align: center;
+      // padding: 80px 0 0 0;
+      // transition: all 0.3s ease;
+      @include for-tablet-landscape-up {
+        margin: 0;
+        display: block;
+      }
+      li {
+        list-style-type: none;
+        display: block;
+        @include for-tablet-landscape-up {
+          display: inline-block;
+        }
+        a {
+          color: #fff;
+          // display: inline-block;
+          font-size: 25px;
+          margin: 20px 0;
+          font-size: 25px;
+          text-decoration: none;
+          @include for-tablet-landscape-up {
+            font-size: 18px;
+            font-weight: 500;
+            // display: block;
+            margin: 0 0 0 25px;
+            &:hover {
+              color: crimson;
+              transition: color 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+    .menu-btn {
+      @include for-tablet-landscape-up {
+        display: none;
+      }
+    }
+  }
+}
+
+.header .menu {
+}
+.header .menu.active {
+  left: 0;
+}
+
+.header.sticky {
+  background: crimson;
+  padding: 15px 0;
+  .menu-wrapper {
+    .logo {
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+// End Header Section
+
+// Hero Section
+.hero {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  min-height: 500px;
+  background: #000000;
+  font-family: "Ubuntu", sans-serif;
+  p {
+    font-size: 27px;
+    color: #fff;
+    margin: 0;
+    span {
+      color: crimson;
+      font-weight: 500;
+    }
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    @include for-tablet-portrait-up {
+      font-size: 70px;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 75px;
+    }
+  }
+  .mydetails {
+    margin: 5px 0;
+    @include for-tablet-portrait-up {
+      font-size: 35px;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 40px;
+    }
+  }
+  a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    background: crimson;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    @include for-tablet-portrait-up {
+      font-size: 23px;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 25px;
+      padding: 12px 36px;
+    }
+  }
+}
+// End Hero Section
