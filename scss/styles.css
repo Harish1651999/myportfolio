@@ -291,4 +291,102 @@
   text-align: justify;
   margin: 0;
 }
+
+.services {
+  padding: 6.3rem 0;
+  background: #000000;
+}
+
+.services .title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 4rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.services .title::after {
+  content: "who i provide";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  padding: 0 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.3rem;
+  color: crimson;
+  background: #000000;
+}
+
+.services .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  height: 0.2rem;
+  width: 11rem;
+}
+
+.services .services-card {
+  background: #222;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.services .services-card .services-card-body:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.services .services-card .services-card-body img {
+  width: 3rem;
+  margin: 0 auto;
+}
+
+.services .services-card .services-card-body .non-hover {
+  display: block;
+}
+
+.services .services-card .services-card-body .on-hover {
+  display: none;
+}
+
+.services .services-card .services-card-body h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0.7rem 0 0.7rem 0;
+}
+
+.services .services-card .services-card-body p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.services .services-card:hover {
+  background: crimson;
+}
+
+.services .services-card:hover .on-hover {
+  display: block;
+}
+
+.services .services-card:hover .non-hover {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */

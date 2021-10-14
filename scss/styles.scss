@@ -244,3 +244,87 @@
   }
 }
 // End About Section
+
+// Services Section
+.services {
+  padding: 6.3rem 0;
+  background: #000000;
+  .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    &::after {
+      content: "who i provide";
+      position: absolute;
+      bottom: -0.6rem;
+      left: 50%;
+      padding: 0 0.5rem;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+      color: crimson;
+      background: #000000;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      height: 0.2rem;
+      width: 11rem;
+    }
+  }
+  .services-card {
+    background: #222;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    .services-card-body {
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+      img {
+        width: 3rem;
+        margin: 0 auto;
+      }
+      .non-hover {
+        display: block;
+      }
+      .on-hover {
+        display: none;
+      }
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 0.7rem 0 0.7rem 0;
+      }
+      p {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    &:hover {
+      background: crimson;
+      .on-hover {
+        display: block;
+      }
+      .non-hover {
+        display: none;
+      }
+    }
+  }
+}
+// End Services Section
