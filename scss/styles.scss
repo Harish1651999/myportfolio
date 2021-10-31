@@ -124,6 +124,15 @@
         color: #fff;
       }
     }
+    .menu {
+      li {
+        a {
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 // End Header Section
@@ -328,3 +337,107 @@
   }
 }
 // End Services Section
+
+// Skills Section Starts
+.skills {
+  padding: 6.3rem 0;
+  font-family: "Poppins", sans-serif;
+  .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    &::after {
+      content: "what i know";
+      position: absolute;
+      bottom: -0.6rem;
+      left: 50%;
+      padding: 0 0.5rem;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+      color: crimson;
+      background: #fff;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #000000;
+      height: 0.2rem;
+      width: 11rem;
+    }
+  }
+  .skills-content {
+    .skills-content-left {
+      margin-bottom: 3rem;
+      @include for-tablet-landscape-up {
+        margin-bottom: 0rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.9rem;
+      }
+      p {
+        font-size: 1rem;
+        text-align: justify;
+        margin: 0;
+      }
+    }
+    .skills-content-right {
+      .bars {
+        margin-bottom: 1rem;
+        .skills-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.3rem;
+          span {
+            font-size: 1.15rem;
+            font-weight: 500;
+          }
+        }
+        .skills-line {
+          position: relative;
+          width: 100%;
+          height: 0.3rem;
+          background-color: #ccc;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: crimson;
+          }
+        }
+        .html {
+          &::before {
+            width: 90%;
+          }
+        }
+        .css {
+          &::before {
+            width: 90%;
+          }
+        }
+        .js {
+          &::before {
+            width: 70%;
+          }
+        }
+        .bootstrap {
+          &::before {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+// Skills Section Ends
