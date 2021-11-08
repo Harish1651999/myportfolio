@@ -509,4 +509,106 @@
 .skills .skills-content .skills-content-right .bars .bootstrap::before {
   width: 80%;
 }
+
+.teams {
+  padding: 6.3rem 0;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+}
+
+.teams .title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 4rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.teams .title::after {
+  content: "who with me";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  padding: 0 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.3rem;
+  color: crimson;
+  background: #000000;
+}
+
+.teams .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  height: 0.2rem;
+  width: 11rem;
+}
+
+.teams .teams-slider {
+  margin-top: 7rem;
+}
+
+.teams .teams-slider .teams-card {
+  background: #222;
+  padding: 2rem;
+  margin: 0 1rem;
+  border-radius: 0.5rem;
+}
+
+.teams .teams-slider .teams-card .team-img {
+  text-align: center;
+}
+
+.teams .teams-slider .teams-card .team-img img {
+  height: 9rem;
+  width: 9rem;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 0.2rem solid crimson;
+}
+
+.teams .teams-slider .teams-card h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.teams .teams-slider .teams-card p {
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.teams .slick-dots {
+  bottom: -3rem;
+}
+
+.teams .slick-dots li button {
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0.1rem solid crimson;
+  border-radius: 2rem;
+}
+
+.teams .slick-dots li button::before {
+  display: none;
+}
+
+.teams .slick-dots .slick-active button {
+  background-color: crimson;
+}
 /*# sourceMappingURL=styles.css.map */

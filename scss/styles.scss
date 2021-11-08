@@ -441,3 +441,95 @@
   }
 }
 // Skills Section Ends
+
+// Teams Section Starts
+.teams {
+  padding: 6.3rem 0;
+  font-family: "Poppins", sans-serif;
+  background: #000000;
+  .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    &::after {
+      content: "who with me";
+      position: absolute;
+      bottom: -0.6rem;
+      left: 50%;
+      padding: 0 0.5rem;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+      color: crimson;
+      background: #000000;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      height: 0.2rem;
+      width: 11rem;
+    }
+  }
+  .teams-slider {
+    margin-top: 7rem;
+    .teams-card {
+      background: #222;
+      padding: 2rem;
+      margin: 0 1rem;
+      border-radius: 0.5rem;
+      .team-img {
+        text-align: center;
+        img {
+          height: 9rem;
+          width: 9rem;
+          margin: 0 auto;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 0.2rem solid crimson;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+        color: #fff;
+        text-align: center;
+        margin: 1rem 0;
+      }
+      p {
+        font-size: 1.1rem;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .slick-dots {
+    bottom: -3rem;
+    li {
+      button {
+        width: 0.9rem;
+        height: 0.9rem;
+        display: inline-block;
+        cursor: pointer;
+        background-color: #fff;
+        border: 0.1rem solid crimson;
+        border-radius: 2rem;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        background-color: crimson;
+      }
+    }
+  }
+}
+// Teams Section Ends
