@@ -313,7 +313,7 @@
 }
 
 .services .title::after {
-  content: "who i provide";
+  content: "what i provide";
   position: absolute;
   bottom: -0.6rem;
   left: 50%;
@@ -563,11 +563,11 @@
   border-radius: 0.5rem;
 }
 
-.teams .teams-slider .teams-card .team-img {
+.teams .teams-slider .teams-card .teams-card-body .team-img {
   text-align: center;
 }
 
-.teams .teams-slider .teams-card .team-img img {
+.teams .teams-slider .teams-card .teams-card-body .team-img img {
   height: 9rem;
   width: 9rem;
   margin: 0 auto;
@@ -577,17 +577,44 @@
   border: 0.2rem solid crimson;
 }
 
-.teams .teams-slider .teams-card h2 {
-  font-size: 2rem;
+.teams .teams-slider .teams-card .teams-card-body h2 {
+  font-size: 1.8rem;
   color: #fff;
   text-align: center;
   margin: 1rem 0;
 }
 
-.teams .teams-slider .teams-card p {
+@media (min-width: 992px) {
+  .teams .teams-slider .teams-card .teams-card-body h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .teams .teams-slider .teams-card .teams-card-body h2 {
+    font-size: 2rem;
+  }
+}
+
+.teams .teams-slider .teams-card .teams-card-body p {
   font-size: 1.1rem;
   color: #fff;
   text-align: center;
+}
+
+.teams .teams-slider .teams-card .teams-card-body:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.teams .teams-slider .teams-card:hover {
+  background-color: crimson;
+}
+
+.teams .teams-slider .teams-card:hover .team-img img {
+  border: 0.2rem solid #fff;
 }
 
 .teams .slick-dots {
@@ -610,5 +637,173 @@
 
 .teams .slick-dots .slick-active button {
   background-color: crimson;
+}
+
+.contact {
+  padding: 6.3rem 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+.contact .title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 4rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contact .title::after {
+  content: "get in touch";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 50%;
+  padding: 0 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.3rem;
+  color: crimson;
+  background: #fff;
+}
+
+.contact .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #000000;
+  height: 0.2rem;
+  width: 11rem;
+}
+
+.contact .contact-inner-details .contact-details {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-inner-details .contact-details {
+    margin-bottom: 0;
+  }
+}
+
+.contact .contact-inner-details .contact-details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.contact .contact-inner-details .contact-details p {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .contact .contact-inner-details .contact-details p {
+    word-spacing: 0rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact .contact-inner-details .contact-details p {
+    word-spacing: 0.5rem;
+  }
+}
+
+.contact .contact-inner-details .contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact .contact-inner-details .contact-wrapper .contact-icon img {
+  width: 2rem;
+}
+
+.contact .contact-inner-details .contact-wrapper .contact-info {
+  margin-left: 1.5rem;
+}
+
+.contact .contact-inner-details .contact-wrapper .contact-info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 0.2rem;
+}
+
+.contact .contact-inner-details .contact-wrapper .contact-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.contact .contact-inner-details .message-me h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.contact .contact-inner-details .message-me form .form-control {
+  border: 0.1rem solid lightgrey;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-inner-details .message-me form .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contact .contact-inner-details .message-me form button {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.1rem;
+  margin: 0;
+}
+
+.contact .contact-inner-details .message-me form button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer {
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+}
+
+footer span {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+
+footer span a {
+  font-size: 1rem;
+  color: crimson;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  color: crimson;
+  text-decoration: underline;
+}
+
+footer span img {
+  width: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */
