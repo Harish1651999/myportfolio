@@ -13,6 +13,14 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 
+  $(".close-menu").click(function () {
+    $(".header .menu").removeClass("active");
+  });
+
+  $(".menu li").click(function () {
+    $(".header .menu").removeClass("active");
+  });
+
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: ["Devoloper", "YouTuber", "Designer"],

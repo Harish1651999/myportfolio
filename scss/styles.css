@@ -81,19 +81,45 @@
 }
 
 .header .menu-wrapper .menu {
-  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  background: #111;
+  text-align: center;
+  padding: 30px 0 0 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 992px) {
   .header .menu-wrapper .menu {
+    position: unset;
     margin: 0;
+    height: auto;
+    background: #000000;
+    padding: 0;
     display: block;
+    text-align: right;
+  }
+}
+
+.header .menu-wrapper .menu .close-menu {
+  margin: 1rem;
+  text-align: right;
+}
+
+@media (min-width: 992px) {
+  .header .menu-wrapper .menu .close-menu {
+    display: none;
   }
 }
 
 .header .menu-wrapper .menu li {
   list-style-type: none;
   display: block;
+  margin: 1rem 0;
 }
 
 @media (min-width: 992px) {
@@ -140,6 +166,10 @@
 
 .header.sticky .menu-wrapper .logo span {
   color: #fff;
+}
+
+.header.sticky .menu-wrapper .menu {
+  background: crimson;
 }
 
 .header.sticky .menu-wrapper .menu li a:hover {

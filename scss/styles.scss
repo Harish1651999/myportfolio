@@ -26,18 +26,22 @@ $dark: #000000;
   border-radius: 6px;
   border: 2px solid $primary;
   transition: all 0.3s ease;
+
   &:hover {
     color: $primary;
     background: $light;
   }
+
   @include for-tablet-portrait-up {
     font-size: 23px;
   }
+
   @include for-tablet-landscape-up {
     font-size: 25px;
     padding: 12px 36px;
   }
 }
+
 // End Common Styling
 
 // Header Section
@@ -49,13 +53,16 @@ $dark: #000000;
   padding: 30px 0;
   background: $dark;
   transition: all 0.3s ease;
+
   @include for-phone-only {
     background-color: $dark;
   }
+
   .menu-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .logo {
       a {
         color: $light;
@@ -63,31 +70,49 @@ $dark: #000000;
         font-weight: 600;
         text-decoration: none;
       }
+
       span {
         color: $primary;
       }
     }
+
     .menu {
-      display: none;
-      // position: fixed;
-      // height: 100vh;
-      // width: 100%;
-      // left: -100%;
-      // top: 0;
-      // background: #111;
-      // text-align: center;
-      // padding: 80px 0 0 0;
-      // transition: all 0.3s ease;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding: 30px 0 0 0;
+      transition: all 0.3s ease;
       @include for-tablet-landscape-up {
+        position: unset;
         margin: 0;
+        height: auto;
+        background: #000000;
+        padding: 0;
         display: block;
+        text-align: right;
       }
+
+      .close-menu{
+        margin: 1rem;
+        text-align: right;
+        @include for-tablet-landscape-up{
+          display: none;
+        }
+      }
+
       li {
         list-style-type: none;
         display: block;
+        margin: 1rem 0;
+
         @include for-tablet-landscape-up {
           display: inline-block;
         }
+
         a {
           color: $light;
           // display: inline-block;
@@ -95,11 +120,13 @@ $dark: #000000;
           margin: 20px 0;
           font-size: 25px;
           text-decoration: none;
+
           @include for-tablet-landscape-up {
             font-size: 18px;
             font-weight: 500;
             // display: block;
             margin: 0 0 0 25px;
+
             &:hover {
               color: $primary;
               transition: color 0.3s ease;
@@ -108,6 +135,7 @@ $dark: #000000;
         }
       }
     }
+
     .menu-btn {
       @include for-tablet-landscape-up {
         display: none;
@@ -123,13 +151,16 @@ $dark: #000000;
 .header.sticky {
   background: $primary;
   padding: 15px 0;
+
   .menu-wrapper {
     .logo {
       span {
         color: $light;
       }
     }
+
     .menu {
+      background: $primary;
       li {
         a {
           &:hover {
@@ -140,6 +171,7 @@ $dark: #000000;
     }
   }
 }
+
 // Header Section Ends
 
 // Hero Section Starts
@@ -150,47 +182,58 @@ $dark: #000000;
   min-height: 500px;
   background: $dark;
   font-family: "Ubuntu", sans-serif;
+
   p {
     font-size: 27px;
     color: $light;
     margin: 0;
+
     span {
       color: $primary;
       font-weight: 500;
     }
   }
+
   h1 {
     font-size: 50px;
     font-weight: 600;
     color: $light;
     margin: 0;
+
     @include for-tablet-portrait-up {
       font-size: 70px;
     }
+
     @include for-tablet-landscape-up {
       font-size: 75px;
     }
   }
+
   .mydetails {
     margin: 5px 0;
+
     @include for-tablet-portrait-up {
       font-size: 35px;
     }
+
     @include for-tablet-landscape-up {
       font-size: 40px;
     }
   }
+
   .filled-button {
     &:hover {
       background: transparent;
     }
   }
 }
+
 // End Hero Section
 
 // About Section
 .about {
   padding: 6.3rem 0;
+
   .title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -199,6 +242,7 @@ $dark: #000000;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: "Ubuntu", sans-serif;
+
     &::after {
       content: "who i am";
       position: absolute;
@@ -210,6 +254,7 @@ $dark: #000000;
       color: $primary;
       background: $light;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -221,34 +266,43 @@ $dark: #000000;
       width: 11rem;
     }
   }
+
   .about-content {
     .about-content-left {
       margin-bottom: 4rem;
+
       @include for-tablet-portrait-up {
         text-align: center;
       }
+
       img {
         width: 100%;
+
         @include for-tablet-portrait-up {
           height: 22rem;
           width: 22rem;
         }
       }
     }
+
     .about-content-right {
       font-family: "Poppins", sans-serif;
+
       .text {
         font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 0.7rem;
+
         @include for-tablet-portrait-up {
           font-size: 1.6rem;
         }
+
         span {
           color: $primary;
           font-weight: 500;
         }
       }
+
       p {
         font-size: 1rem;
         text-align: justify;
@@ -257,12 +311,14 @@ $dark: #000000;
     }
   }
 }
+
 // End About Section
 
 // Services Section
 .services {
   padding: 6.3rem 0;
   background: $dark;
+
   .title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -272,6 +328,7 @@ $dark: #000000;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: "Ubuntu", sans-serif;
+
     &::after {
       content: "what i provide";
       position: absolute;
@@ -283,6 +340,7 @@ $dark: #000000;
       color: $primary;
       background: $dark;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -294,6 +352,7 @@ $dark: #000000;
       width: 11rem;
     }
   }
+
   .services-card {
     background: #222;
     text-align: center;
@@ -303,50 +362,61 @@ $dark: #000000;
     transition: all 0.3s ease;
     font-family: "Poppins", sans-serif;
     margin-bottom: 1rem;
+
     .services-card-body {
       &:hover {
         transform: scale(1.05);
         transition: all 0.3s ease;
       }
+
       img {
         width: 3rem;
         margin: 0 auto;
       }
+
       .non-hover {
         display: block;
       }
+
       .on-hover {
         display: none;
       }
+
       h2 {
         font-size: 1.6rem;
         font-weight: 500;
         color: $light;
         margin: 0.7rem 0 0.7rem 0;
       }
+
       p {
         font-size: 1rem;
         color: $light;
         margin: 0;
       }
     }
+
     &:hover {
       background: $primary;
+
       .on-hover {
         display: block;
       }
+
       .non-hover {
         display: none;
       }
     }
   }
 }
+
 // End Services Section
 
 // Skills Section Starts
 .skills {
   padding: 6.3rem 0;
   font-family: "Poppins", sans-serif;
+
   .title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -355,6 +425,7 @@ $dark: #000000;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: "Ubuntu", sans-serif;
+
     &::after {
       content: "what i know";
       position: absolute;
@@ -366,6 +437,7 @@ $dark: #000000;
       color: $primary;
       background: $light;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -377,41 +449,50 @@ $dark: #000000;
       width: 11rem;
     }
   }
+
   .skills-content {
     .skills-content-left {
       margin-bottom: 3rem;
+
       @include for-tablet-landscape-up {
         margin-bottom: 0rem;
       }
+
       h3 {
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.9rem;
       }
+
       p {
         font-size: 1rem;
         text-align: justify;
         margin: 0;
       }
     }
+
     .skills-content-right {
       .bars {
         margin-bottom: 1rem;
+
         .skills-info {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-bottom: 0.3rem;
+
           span {
             font-size: 1.15rem;
             font-weight: 500;
           }
         }
+
         .skills-line {
           position: relative;
           width: 100%;
           height: 0.3rem;
           background-color: #ccc;
+
           &::before {
             content: "";
             position: absolute;
@@ -421,21 +502,25 @@ $dark: #000000;
             background: $primary;
           }
         }
+
         .html {
           &::before {
             width: 90%;
           }
         }
+
         .css {
           &::before {
             width: 90%;
           }
         }
+
         .js {
           &::before {
             width: 70%;
           }
         }
+
         .bootstrap {
           &::before {
             width: 80%;
@@ -445,6 +530,7 @@ $dark: #000000;
     }
   }
 }
+
 // Skills Section Ends
 
 // Teams Section Starts
@@ -452,6 +538,7 @@ $dark: #000000;
   padding: 6.3rem 0;
   font-family: "Poppins", sans-serif;
   background: $dark;
+
   .title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -461,6 +548,7 @@ $dark: #000000;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: "Ubuntu", sans-serif;
+
     &::after {
       content: "who with me";
       position: absolute;
@@ -472,6 +560,7 @@ $dark: #000000;
       color: $primary;
       background: $dark;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -483,16 +572,20 @@ $dark: #000000;
       width: 11rem;
     }
   }
+
   .teams-slider {
     margin-top: 7rem;
+
     .teams-card {
       background: #222;
       padding: 2rem;
       margin: 0 1rem;
       border-radius: 0.5rem;
+
       .teams-card-body {
         .team-img {
           text-align: center;
+
           img {
             height: 9rem;
             width: 9rem;
@@ -502,30 +595,37 @@ $dark: #000000;
             border: 0.2rem solid $primary;
           }
         }
+
         h2 {
           font-size: 1.8rem;
           color: $light;
           text-align: center;
           margin: 1rem 0;
+
           @include for-tablet-landscape-up {
             font-size: 1.6rem;
           }
+
           @include for-desktop-up {
             font-size: 2rem;
           }
         }
+
         p {
           font-size: 1.1rem;
           color: $light;
           text-align: center;
         }
+
         &:hover {
           transform: scale(1.05);
           transition: all 0.3s ease;
         }
       }
+
       &:hover {
         background-color: $primary;
+
         .team-img {
           img {
             border: 0.2rem solid $light;
@@ -534,8 +634,10 @@ $dark: #000000;
       }
     }
   }
+
   .slick-dots {
     bottom: -3rem;
+
     li {
       button {
         width: 0.9rem;
@@ -545,11 +647,13 @@ $dark: #000000;
         background-color: $light;
         border: 0.1rem solid $primary;
         border-radius: 2rem;
+
         &::before {
           display: none;
         }
       }
     }
+
     .slick-active {
       button {
         background-color: $primary;
@@ -557,6 +661,7 @@ $dark: #000000;
     }
   }
 }
+
 // Teams Section Ends
 
 // Contact Section Starts
@@ -564,6 +669,7 @@ $dark: #000000;
   padding: 6.3rem 0;
   font-family: "Poppins", sans-serif;
   background: $light;
+
   .title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -573,6 +679,7 @@ $dark: #000000;
     padding-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: "Ubuntu", sans-serif;
+
     &::after {
       content: "get in touch";
       position: absolute;
@@ -584,6 +691,7 @@ $dark: #000000;
       color: $primary;
       background: $light;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -595,43 +703,54 @@ $dark: #000000;
       width: 11rem;
     }
   }
+
   .contact-inner-details {
     .contact-details {
       margin-bottom: 3rem;
+
       @include for-tablet-portrait-up {
         margin-bottom: 0;
       }
+
       h3 {
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.9rem;
       }
+
       p {
         font-size: 1rem;
+
         @include for-phone-only {
           word-spacing: 0rem;
         }
+
         @include for-tablet-landscape-up {
           word-spacing: 0.5rem;
         }
       }
     }
+
     .contact-wrapper {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
+
       .contact-icon {
         img {
           width: 2rem;
         }
       }
+
       .contact-info {
         margin-left: 1.5rem;
+
         h4 {
           font-size: 1.1rem;
           font-weight: 500;
           margin: 0 0 0.2rem;
         }
+
         p {
           font-size: 1rem;
           color: #333;
@@ -639,25 +758,30 @@ $dark: #000000;
         }
       }
     }
+
     .message-me {
       h3 {
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: 0.9rem;
       }
+
       form {
         .form-control {
           border: 0.1rem solid lightgrey;
           font-family: "Poppins", sans-serif;
           transition: all 0.3s ease;
+
           &:focus {
             box-shadow: none;
           }
         }
+
         button {
           font-size: 1.1rem;
           padding: 0.5rem 1.1rem;
           margin: 0;
+
           &:focus {
             box-shadow: none;
           }
@@ -666,6 +790,7 @@ $dark: #000000;
     }
   }
 }
+
 // Contact Section Ends
 
 // Footer Section Starts
@@ -673,27 +798,33 @@ footer {
   background-color: $dark;
   font-family: "Poppins", sans-serif;
   padding: 1.5rem;
+
   @include for-tablet-portrait-up {
     padding: 1rem;
   }
+
   span {
     font-size: 1rem;
     color: $light;
     margin: 0;
     display: block;
     text-align: center;
+
     a {
       font-size: 1rem;
       color: $primary;
       text-decoration: none;
+
       &:hover {
         color: $primary;
         text-decoration: underline;
       }
     }
+
     img {
       width: 1rem;
     }
   }
 }
+
 // Footer Section Ends
